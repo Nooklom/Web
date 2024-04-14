@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Comics</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Style/header.css">
+        <link rel="stylesheet" href="Style/comicview.css">
+        <link rel="stylesheet" href="Style/navtree.css">
+        <link rel="stylesheet" href="Style/comicslist.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+         
+        <script>
+            $(function(){
+                $('header').load("header.html");
+                $('#currentpage').append($("title").text())
+                $("#currentpage").click(false);
+            })
+            $(document).ready(function(){
+                
+                $('#currentpage').off('click');
+                $(".comiccard").click(function(){
+                    $("#comicslist").hide();
+                    $("#comicview").show();
+                    $("#comicview").load("bunny");
+                    $("#currentcomic").append($(this).text());
+                    $("#currentpage").removeClass("freeze");
+                    $("<div class='separator'>>></div>").insertAfter("#currentpage");
+                    $("#currentpage").click(function(){
+                        $('#currentpage').next('div.separator').remove();
+                        $("#comicslist").show();
+                        $("#comicview").hide();
+                        $("#comicview").empty();
+                        $("#currentcomic").text("");
+                        $("#currentpage").addClass("freeze");
+                        $("#currentpage").click(false);
+                    });
+                });
+
+
+            });
+            $(document).ready(function(){
+  
+            });
+        </script>
+    </head>
+    <header></header>
+    <body>
+        <nav class="navtree"><div class='freeze'id='currentpage'></div><div class="freeze" id="currentcomic"></div></nav>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="comicslist">
+            <a class="comiccard" value="bunny">
+                <div class="comicTitle" value="bunny"><h4 class=" noselect">Bunny</h4></div>
+                <img src="Comics/Bunny/1.png" alt="comicpages">
+            </a>
+        </div>
+        <div id="comicview" hidden>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
