@@ -12,6 +12,6 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: for f in ./*; do
-                echo f;
+                echo $f;
             done
             
