@@ -13,7 +13,7 @@ jobs:
       - run: bats -v
       - run: for comic in ./Comics/*; 
             do
-                for page in $comic; 
+                for page in $comic/*.png; 
                 do
                   cat $page >> $comic.html;
                 done
