@@ -11,8 +11,11 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
-      - run: for comic in ./Comics*; do
-                for page in $comic; do
+      - run: for comic in ./Comics*; 
+            do
+                for page in $comic; 
+                do
                   cat $page $comic.html;
+                done
             done
             
