@@ -1,0 +1,42 @@
+#comicview img{
+    width: 100%;
+    vertical-align: baseline;
+}
+#comicview{
+    position: absolute;
+    left: 35%;
+    right: 35%;
+    line-height: 0px;
+    padding-top: .5rem;
+    background-color: blueviolet;  
+}
+body{
+
+   background-color: red;
+}
+
+/* Add media queries for responsiveness - when the screen is 1000px wide or less, stack the links on top of each other */
+@media screen and (max-width: 1000px) {
+
+    #comicview {
+        left: 25%;
+        right: 25%;
+    }
+    body{
+        margin: 0px;
+    }
+  }
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+
+    #comicview {
+        left: 0%;
+        right: 0%;
+        max-width: 100%;
+        width: 100%;
+    }
+    body{
+        margin: 0px;
+    }
+  }
+  
