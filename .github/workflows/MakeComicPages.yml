@@ -14,6 +14,6 @@ jobs:
       - run: for comic in ./Comics*; do
               touch $comic.html;
                 for page in $comic; do
-                  cat "<img src=" $page "/>" > $comic.html;
+                  cat $page $comic.html;
             done
             
