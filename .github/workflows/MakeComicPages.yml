@@ -12,7 +12,6 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: for comic in ./Comics*; do
-              touch $comic.html;
                 for page in $comic; do
                   cat $page $comic.html;
             done
