@@ -11,7 +11,7 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
-      - run: for f in ./Comics/*; do
+      - run: for f in ./*; do
                 echo f;
             done
             
