@@ -15,7 +15,7 @@ jobs:
             do
                 for page in $comic; 
                 do
-                  cat $page $comic.html;
+                  cat $page >> $comic.html;
                 done
             done
             
