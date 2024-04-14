@@ -1,2 +1,2 @@
-# Web
-my comics and whatnot
+# Comics
+website for my comics and whatnot
