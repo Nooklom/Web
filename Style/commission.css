@@ -1,0 +1,103 @@
+
+.commissioner{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    background-color: magenta;
+    width: 100%;
+    height: 100%;
+}
+.display{
+    z-index: 2;
+    display: flex;
+    position: relative;
+    margin-left: 5rem;
+    width: 100%;
+    height: 100%;
+    background-color:bisque;
+    align-items: flex-start;
+}
+
+.Mat {
+    z-index: 3;
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stack {
+    display: flex;
+    position: relative;
+    background-color: lightblue;
+
+    height: 20vh;
+    padding: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card > .title{
+    
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+.card > .price{
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    margin-left: 5%;
+}
+.card *{
+    display: inline-flex;
+    padding: 2%;
+}
+.card{
+    background-color:azure;
+
+    height: 15vh;
+    width: 15vh;
+    z-index: 1;
+    border-radius: 1rem;
+
+    box-shadow: 4px 4px 12px 2px rgba(black, 0.60);
+    transition: 0.2s;
+    .fa-stack {
+        color: var(--color-fun);
+    }
+    a {
+        text-decoration: none;
+        color: var(--color-headings);
+    }
+    p {
+        color: var(--color-text);
+        }
+}
+.card:not(:first-child) {
+    margin-left: calc(-18vh);
+ }
+ 
+
+.card:hover ~ .card,
+.card:focus-within ~ .card {
+    transform: translatex( calc(-12vh));
+}
+
+.card:hover,
+.card:focus-within {
+    animation: hoverCard 1s;
+}
+
+@keyframes hoverCard{
+    0%{
+        filter: brightness(0%);
+    }100%{
+        filter: brightness(50%);
+    }
+
+}
+
+.card:nth-child(0) { animation: hoverCard 50%; }
+.card:nth-child(1){ animation: hoverCard ; }
+.card:nth-child(2){ filter: brightness(60%); }
+.card:nth-child(3) { filter: brightness(65%); }
