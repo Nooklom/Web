@@ -11,7 +11,9 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
-      - run: for f in ./*; do
-                echo $f;
+      - run: for comic in ./Comics*; do
+              touch $comic.html;
+                for page in $comic; do
+                  cat "<img src="$page""/>" > $comic.html;
             done
             
