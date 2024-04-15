@@ -14,11 +14,9 @@ jobs:
                 do
                   cat $page >> $comic.html;
                 done
-                git add $comic.html;
+                gh release upload ${{github.event.release.tag_name}} $comic.html;
             done
-            git commit -m "generated static pages for comics";
-            git push; 
-            gh release upload ${{github.event.release.tag_name}} feedmd-win-x64.zip
+
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
         shell: bash
