@@ -19,7 +19,7 @@ jobs:
           touch ./generatedcomics;
           for comic in ./Comics/*;
             do
-              cd .generatedcomics;
+              cd ./generatedcomics;
               touch $comic.html;
                 for page in $comic/*.png; 
                 do
