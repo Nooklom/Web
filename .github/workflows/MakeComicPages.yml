@@ -26,9 +26,9 @@ jobs:
                   echo $page >> $comic.html;
                 done;
                 mv $comic.html ./generatedcomics;
-            done
-            git add ./generatedcomics/*
-            git commit -m "generated comics added"
+            done;
+            git add ./generatedcomics/*;
+            git commit -m "generated comics added";
             git push
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
