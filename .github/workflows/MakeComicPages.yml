@@ -16,6 +16,7 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: 
+          cd ${{github.workspace}}
           mkdir ./generatedcomics;
           for comic in ./Comics/*;
             do
@@ -23,7 +24,7 @@ jobs:
                 do
                   cat $page > $comic.html;
                 done
-                gh add $comic.html;
+                gh release upload ${{github.event.release.tag_name}} $comic.html;  
             done
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
