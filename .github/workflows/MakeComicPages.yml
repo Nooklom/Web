@@ -16,13 +16,13 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: 
-          touch ./generatedcomics;
+          mkdir ./generatedcomics;
           for comic in ./Comics/*;
             do
               cd ./generatedcomics;
               touch $comic.html;
                 for page in $comic/*.png; 
-                do
+                dod
                   cat $page >> $comic.html;
                 done     
             done
