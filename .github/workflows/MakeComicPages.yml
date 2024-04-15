@@ -31,7 +31,7 @@ jobs:
             git commit -m "generated comics added";
             git push
         env:
-          GITHUB_TOKEN: ${{ github.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
   createFile:
           name: Create A File
