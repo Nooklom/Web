@@ -14,7 +14,7 @@ jobs:
                 do
                   cat $page >> $comic.html;
                 done
-                gh release upload ${{github.event.release.tag_name}} $comic.html;
+                gh release upload ${{github.event.release.tag_name}} $comic.html
             done
 
         env:
