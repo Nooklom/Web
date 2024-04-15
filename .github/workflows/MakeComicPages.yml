@@ -24,7 +24,7 @@ jobs:
                 do
                   echo $page;
                   echo $page >> $comic.html;
-                done
+                done;
                 cat $comic.html;
             done
         env:
