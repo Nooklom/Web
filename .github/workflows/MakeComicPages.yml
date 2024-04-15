@@ -23,7 +23,7 @@ jobs:
                 for page in $comic/*.png; 
                 do
                   cat $page > $comic.html;
-                  echo $comic.html;
+                  cat $comic.html > ${{github.output}};
                 done
             done
         env:
