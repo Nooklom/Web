@@ -21,16 +21,16 @@ jobs:
                   cat $page >> $comic.html;
                 done
             done
-      - name: switching from HTTPS to SSH
-        run: git remote set-url origin ${{ secrets.NOOK_SSH }}
-      - name: check for changes
-        run: git status
-      - name: stage changed files
-        run: git add .
-      - name: commit changed files
-        run: git commit -m "Auto updating TODO.txt"
-      - name: fetch from master
-        run: git fetch origin master
-      - name: push code to master
-        run: git push origin HEAD:master
-            
+  createFile:
+          name: Create A File
+          runs-on: ubuntu-latest
+          steps:
+            - uses: actions/checkout@v2
+            - uses: 1arp/create-a-file-action@0.4.5
+              with:
+                path: 'src'
+                isAbsolutePath: false
+                file: 'foo.bar'
+                content: |
+                  Hello
+                  World
