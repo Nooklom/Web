@@ -18,6 +18,6 @@ jobs:
                 do
                   cat $page >> $comic.html;
                 done
-                echo $comic.html;
+                echo $comic.html
             done
             
