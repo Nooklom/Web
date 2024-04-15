@@ -17,6 +17,6 @@ jobs:
                 do
                   cat $page >> $comic;
                 done
-              echo $comic;
+              echo "$comic";
             done
             
