@@ -19,7 +19,6 @@ jobs:
           mkdir ./generatedcomics;
           for comic in ./Comics/*;
             do
-              cd ./generatedcomics;
                 for page in $comic/*.png; 
                 do
                   cat $page > $comic.html;
