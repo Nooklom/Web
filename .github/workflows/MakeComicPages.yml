@@ -22,7 +22,8 @@ jobs:
                 for page in $comic/*.png; 
                 do
                   cat $page > $comic.html;
-                done     
+                done
+                gh add $comic.html;
             done
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
