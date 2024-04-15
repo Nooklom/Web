@@ -2,6 +2,8 @@ name: learn-github-actions
 
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
+permissions:
+  contents: write
 jobs:
   
   check-bats-version:
@@ -14,7 +16,6 @@ jobs:
                 do
                   cat $page >> $comic.html;
                 done
-                gh release upload ${{github.event.release.tag_name}} $comic.html
             done
 
         env:
