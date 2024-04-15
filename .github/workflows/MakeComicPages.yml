@@ -22,7 +22,7 @@ jobs:
               cd ./generatedcomics;
                 for page in $comic/*.png; 
                 do
-                  cat $page >> $comic.html;
+                  cat $page > $comic.html;
                 done     
             done
         env:
