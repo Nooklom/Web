@@ -15,8 +15,9 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
-      - run: for comic in ./Comics/*;
-            touch ./generatedcomics;
+      - run: 
+          touch ./generatedcomics;
+          for comic in ./Comics/*;
             do
               cd .generatedcomics;
               touch $comic.html;
