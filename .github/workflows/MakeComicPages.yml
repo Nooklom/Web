@@ -20,7 +20,7 @@ jobs:
                 done
             done
       - name: switching from HTTPS to SSH
-        run: git remote set-url origin ${{ secrets.Nook_SSH }}
+        run: git remote set-url origin ${{ secrets.NOOK_SSH }}
       - name: check for changes
         run: git status
       - name: stage changed files
