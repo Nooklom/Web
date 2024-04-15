@@ -20,7 +20,10 @@ jobs:
                 do
                   cat $page >> $comic.html;
                 done
+                git add $comic.html;
             done
+            git commit -m "generated static pages for comics";
+            git push; 
   createFile:
           name: Create A File
           runs-on: ubuntu-latest
