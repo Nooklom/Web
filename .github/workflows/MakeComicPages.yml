@@ -15,13 +15,15 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
-      - run: for comic in ./Comics/*; 
+      - run: for comic in ./Comics/*;
+            touch ./generatedcomics;
             do
+              cd .generatedcomics;
               touch $comic.html;
                 for page in $comic/*.png; 
                 do
                   cat $page >> $comic.html;
-                done
+                done     
             done
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
