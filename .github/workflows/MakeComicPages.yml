@@ -23,8 +23,8 @@ jobs:
                 for page in $comic/*.png; 
                 do
                   cat $page > $comic.html;
+                  echo $comic.html;
                 done
-                mv $comic.html ./generatedcomics;
             done
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
