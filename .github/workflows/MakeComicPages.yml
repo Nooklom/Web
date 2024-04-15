@@ -24,8 +24,8 @@ jobs:
                 do
                   echo $page;
                   echo $page >> $comic.html;
-                  cat $comic.html;
                 done
+                cat $comic.html;
             done
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
