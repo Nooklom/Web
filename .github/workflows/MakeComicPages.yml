@@ -23,7 +23,7 @@ jobs:
                 for page in $comic/*.png; 
                 do
                   echo $page;
-                  echo $page > $comic.html;
+                  echo $page >> $comic.html;
                   cat $comic.html;
                 done
             done
