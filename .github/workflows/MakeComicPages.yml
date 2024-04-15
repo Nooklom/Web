@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
       - run: npm install -g bats
       - run: bats -v
       - run: 
@@ -30,8 +32,6 @@ jobs:
             git add ./generatedcomics/*;
             git commit -m "generated comics added";
             git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
   createFile:
           name: Create A File
