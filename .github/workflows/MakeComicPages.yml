@@ -7,12 +7,6 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
       - run: for comic in ./Comics/*; 
             do
               touch $comic.html;
@@ -24,6 +18,10 @@ jobs:
             done
             git commit -m "generated static pages for comics";
             git push; 
+            gh release upload ${{github.event.release.tag_name}} feedmd-win-x64.zip
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
+        shell: bash
   createFile:
           name: Create A File
           runs-on: ubuntu-latest
