@@ -9,6 +9,12 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install -g bats
+      - run: bats -v
       - run: for comic in ./Comics/*; 
             do
               touch $comic.html;
@@ -17,7 +23,6 @@ jobs:
                   cat $page >> $comic.html;
                 done
             done
-
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
         shell: bash
