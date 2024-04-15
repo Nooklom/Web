@@ -11,6 +11,7 @@ jobs:
     steps:
       - run: for comic in ./Comics/*; 
             do
+              touch $comic.html;
                 for page in $comic/*.png; 
                 do
                   cat $page >> $comic.html;
