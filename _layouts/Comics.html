@@ -14,16 +14,16 @@ scss: '/_scss/base/typography.scss'
         {% for file in site.static_files %}
           {% assign title = page.title | append: "/chapters" %}
           {% if file.path contains title %}
-            <img src={{file.path}}></img>
+            <img src={{file.path | relative_url}}></img>
           {% endif %}
         {% endfor %}
         <p><br>{{page.tail}}</p>
         <p>
           {% if page.next_in_category != nil %}
-          <a href="{{page.next_in_category.url}}" class="next-link fa-arrow-circle-left">Older Post : {{page.next_in_category.title}}</a>
+          <a href="{{page.next_in_category.url | relative_url}}" class="next-link fa-arrow-circle-left">Older Post : {{page.next_in_category.title}}</a>
           {% endif %}
           {% if page.previous_in_category != nil %}
-            <a href="{{page.previous_in_category.url}}" class="previous-link fa-arrow-circle-right">Newer Post : {{page.previous_in_category.title}}</a>
+            <a href="{{page.previous_in_category.url | relative_url}}" class="previous-link fa-arrow-circle-right">Newer Post : {{page.previous_in_category.title}}</a>
           {% endif %}
         </p>
 
