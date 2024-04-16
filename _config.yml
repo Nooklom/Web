@@ -1,6 +1,6 @@
 exclude: 
   - vendor/bundle
-website: https://mmistakes.github.io
+website: https://nooklom.github.io
 basewebsite: /comics
 permalink: date
 
