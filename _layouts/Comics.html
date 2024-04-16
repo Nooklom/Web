@@ -1,0 +1,33 @@
+---
+scss: '/_scss/base/typography.scss'
+---
+
+<html>
+    {% include head.html %}
+    {% include header.html %}
+    <body>
+        
+
+        <div id="comicView">
+            <h4>{{page.title}}</h4>
+            {{content}}
+        {% for file in site.static_files %}
+          {% assign title = page.title | append: "/chapters" %}
+          {% if file.path contains title %}
+            <img src={{file.path}}></img>
+          {% endif %}
+        {% endfor %}
+        <p><br>{{page.tail}}</p>
+        <p>
+          {% if page.next_in_category != nil %}
+          <a href="{{page.next_in_category.url}}" class="next-link fa-arrow-circle-left">Older Post : {{page.next_in_category.title}}</a>
+          {% endif %}
+          {% if page.previous_in_category != nil %}
+            <a href="{{page.previous_in_category.url}}" class="previous-link fa-arrow-circle-right">Newer Post : {{page.previous_in_category.title}}</a>
+          {% endif %}
+        </p>
+
+        </div>
+
+    </body>
+</html>

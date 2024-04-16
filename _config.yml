@@ -1,0 +1,31 @@
+exclude: 
+  - vendor/bundle
+collections:
+  comics:
+    output: true
+    permalink: /:collection/:path/
+  thumbnail:
+
+
+defaults:
+  - scope:
+      path: "asset"
+      type: comics
+    values:
+      comments: true
+      share: true
+
+  - scope:
+      path: "_thumbnail/img"
+      type: thumbnail
+    values:
+      thumbnail: true
+
+# General settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+sass:
+  sass_dir: _sass
+  style: :compressed

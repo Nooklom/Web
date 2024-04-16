@@ -1,0 +1,9 @@
+---
+layout: Comics
+title: Bunny
+tail: Thats it for now thank you for reading
+category: comics
+permalink: /:categories/:title
+---
+
+Commissioned by Domkohai @degensoup on twitter

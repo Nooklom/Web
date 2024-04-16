@@ -1,18 +1,30 @@
-#comicview img{
+#comicView img{
     width: 100%;
     vertical-align: baseline;
 }
-#comicview{
+#comicView h4,p{
+    line-height: normal;
+    text-align: center;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+#comicView h4{
+    font-size:larger;
+    text-decoration: underline purple 2px;
+}
+#comicView{
     position: absolute;
     left: 35%;
     right: 35%;
     line-height: 0px;
     padding-top: .5rem;
-    background-color: blueviolet;  
+    background-color: rgb(231, 231, 231);
+    filter: drop-shadow(0px 0px 9px #000000);
+    z-index: -1;
+
 }
 body{
-
-   background-color: red;
+    background: conic-gradient(0deg, rgb(47, 34, 53) 95%, rgba(255,255,255,1) 100%);
 }
 
 /* Add media queries for responsiveness - when the screen is 1000px wide or less, stack the links on top of each other */
@@ -21,6 +33,7 @@ body{
     #comicview {
         left: 25%;
         right: 25%;
+        transition: .1s ease-in .1s;
     }
     body{
         margin: 0px;
@@ -32,8 +45,8 @@ body{
     #comicview {
         left: 0%;
         right: 0%;
-        max-width: 100%;
         width: 100%;
+        transition: .1s ease-in-out .1s;
     }
     body{
         margin: 0px;

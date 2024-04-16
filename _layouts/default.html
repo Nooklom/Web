@@ -1,0 +1,11 @@
+<html>
+    {% include head.html %}
+    <header>{% include header.html %}</header>
+    <body>
+          <div id="comicsList">
+            {% for post in site.posts %}
+            {% include comicCard.html comicname=post.url path=post.url %}
+          {% endfor %}
+        </div>
+    </body>
+</html>
