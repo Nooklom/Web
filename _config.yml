@@ -1,5 +1,9 @@
 exclude: 
   - vendor/bundle
+website: https://mmistakes.github.io
+basewebsite: /comics
+permalink: date
+
 collections:
   comics:
     output: true
