@@ -1,4 +1,4 @@
-<a class="comicCard" href={{post.url}} title="{{post.title}}">
+<a class="comicCard" href="{{post.url | relative_url }}" title="{{post.title}}">
     <div class="comicTitle" ><h4 class=" noselect">{{ post.title }}</h4></div>
-    <img src="{{post.url}}/thumbnail/thumbnail.png" alt="{{ filename }}" />          
+    <img src="{{post.url | relative_url }}/thumbnail/thumbnail.png" alt="{{ filename }}" />          
 </a>
