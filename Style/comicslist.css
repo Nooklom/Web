@@ -1,11 +1,8 @@
-#comicList{
-    position: relative;
-}
 .comicCard{
-    position: absolute;
+    position: relative;
     display: inline-block;
     height: 25%;
-    z-index: -1;
+
     aspect-ratio: 1;
 }
 .comicCard:hover img{
