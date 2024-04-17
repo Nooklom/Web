@@ -143,11 +143,13 @@ ol, ul
   }
   
   /* Float the link section to the right */
+
   .header-right a{
     display: inline-block;
+    
     position: relative;
-    width: 7rem;
-    aspect-ratio: 1;
+    width: 5rem;
+
   }
   .header-right {
     float: right;
@@ -155,15 +157,17 @@ ol, ul
   }
   .header-right a div{
     position:absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
+    top: 0; bottom: -3.4rem; left: 0; right: 0;
     margin: auto;
-    font-size: .7rem;
+    font-size: .9rem;
+    font-weight: bolder;
+    line-height: 70%;
     height: 1rem; /*requires explicit height*/
     padding-left: 10px;
   }
   .header-right img{
     aspect-ratio: 1;
-    width:3rem;
+    width: 2.6rem;
   }
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other 
