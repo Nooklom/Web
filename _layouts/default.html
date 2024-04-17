@@ -2,7 +2,9 @@
     {% include head.html %}
     <header>{% include header.html %}</header>
     <body>
+          <h4 class="category">Comics</h4>
           <div id="comicsList">
+            
             {% for post in site.posts %}
             {% include comicCard.html comicname=post.url path=post.url %}
           {% endfor %}

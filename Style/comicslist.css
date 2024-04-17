@@ -1,17 +1,49 @@
+.category{
+    padding-left: 1rem;
+    font-weight: bold;
+}
 .comicCard{
     position: relative;
     display: inline-block;
     height: 25%;
-
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
     aspect-ratio: 1;
 }
 .comicCard:hover img{
-    filter: sepia(150%)  brightness(117%) hue-rotate(267deg) contrast(110%) ;
-    -webkit-filter: sepia(150%)  brightness(117%) hue-rotate(267deg) contrast(110%) ;
-    -moz-filter: sepia(150%)  brightness(117%) hue-rotate(267deg) contrast(110%) ;
-    transition: all .6s ease-in-out;
+    filter: sepia(60%)  brightness(90%) hue-rotate(267deg) contrast(40%) saturate(190%) ;
+    -webkit-filter: sepia(60%)  brightness(90%) hue-rotate(267deg) contrast(40%) saturate(190%) ;
+    -moz-filter: sepia(60%)  brightness(90%) hue-rotate(267deg) contrast(40%) saturate(130%) ;
+    transition: all .1s ease-in-out;
+    box-shadow: 0px 1px 3px 1px #00000077;
     
 }
+.comicCard:hover img{
+    filter: sepia(60%)  brightness(90%) hue-rotate(267deg) contrast(40%) saturate(190%) ;
+    -webkit-filter: sepia(60%)  brightness(90%) hue-rotate(267deg) contrast(40%) saturate(190%) ;
+    -moz-filter: sepia(60%)  brightness(90%) hue-rotate(267deg) contrast(40%) saturate(130%) ;
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 1px 3px 1px #00000077;
+    
+}
+.comicCard:hover h4{
+    filter: drop-shadow(0px 1px 2px #000000);
+}
+.comicCard h4{
+    transition: all .2s ease-out;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0px 4px 2px #000000);
+    
+}
+.comicCard:active{
+    box-shadow: 0px 1px 6px 1px #000000;
+    
+}
+
 
 .comicCard *, .comicCard *>*{
     height: 100%;
@@ -22,21 +54,23 @@
 }
 .comicTitle h4{
     text-align: center;
-    font-weight: bolder;
-    top: 6rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    top: 3rem;
     z-index: 1;
     font-size: 1.5rem;
-    filter: drop-shadow(0px 0px 9px #000000);
+
+}
+.comicCard{
+    box-shadow: 0px 1px 6px 1px #000000a8;
+    filter: blur(0px) brightness(100%) hue-rotate(0deg) saturate(100%) contrast(100%) invert(0%);
+    -webkit-filter: blur(0px) brightness(100%) hue-rotate(0deg) saturate(100%) contrast(100%) invert(0%);
+    -moz-filter: blur(0px) brightness(100%) hue-rotate(0deg) saturate(100%) contrast(100%) invert(0%);
+    border-radius: .3rem;
+    display: block-inline;
 }
 .comicCard img{
-    transition: all .6s ease-in-out;
-    filter: blur(0px) brightness(100%) hue-rotate(0deg) saturate(100%) contrast(100%) invert(0%) drop-shadow(0px 0px 9px #000000);
-    -webkit-filter: blur(0px) brightness(100%) hue-rotate(0deg) saturate(100%) contrast(100%) invert(0%) drop-shadow(0px 0px 9px #000000);
-    -moz-filter: blur(0px) brightness(100%) hue-rotate(0deg) saturate(100%) contrast(100%) invert(0%) drop-shadow(0px 0px 9px #000000);
     border-radius: .3rem;
-    display: block;
 }
-
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -47,5 +81,7 @@
                                     supported by Chrome, Edge, Opera and Firefox */
   }
 #comicsList {
-background-color: aliceblue;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: aliceblue;
 }

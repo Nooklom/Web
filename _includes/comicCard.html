@@ -1,4 +1,5 @@
-<a class="comicCard" href="{{post.url | relative_url }}" title="{{post.title}}">
-    <div class="comicTitle" ><h4 class="comicTitle noselect">{{ post.title }}</h4></div>
+{% assign title = post.title | replace: "-" ," " | replace: "_" ," " %}
+<button class="comicCard" onclick="location.href='{{post.url | relative_url }}'" title="{{post.title}}">
+    <div class="comicTitle" ><h4 class="comicTitle noselect">{{ title}}</h4></div>
     <img src="{{post.url | relative_url }}/thumbnail/thumbnail.png" alt="{{ filename }}" />          
-</a>
+</button>
